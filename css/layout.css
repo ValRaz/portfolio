@@ -161,17 +161,22 @@
 
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
+
+.site-footer__nav{
+  position: relative;
+  z-index: 1000;
+}
   .site-header__links,
   .site-footer__links {
     display: none;
     flex-direction: column;
-    background: transparent; 
+    background: transparent;
     position: absolute;
     top: var(--bar-height);
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    gap: 0.5rem; 
+    gap: 0.5rem;
   }
 
   /* Show the burger toggles */
