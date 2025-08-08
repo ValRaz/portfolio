@@ -19,12 +19,12 @@ document.querySelectorAll('.site-header__link[href^="#"], .site-footer__link[hre
     });
   });
 
-// 2. Toggle button handler for both header and footer
-document.querySelectorAll('.site-header__toggle, .site-footer__toggle')
-  .forEach(btn => {
-    btn.addEventListener('click', () => {
-      const nav = btn.closest('nav');
-      const isOpen = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(isOpen));
-    });
-  });
+// Toggle button handler for header
+ document.querySelectorAll('.site-header__toggle')
+   .forEach(btn => {
+     btn.addEventListener('click', () => {
+       const nav = btn.closest('nav');
+       const isOpen = nav.classList.toggle('open');
+       btn.setAttribute('aria-expanded', String(isOpen));
+     });
+   });

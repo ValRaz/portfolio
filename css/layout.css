@@ -39,8 +39,7 @@
   color: #8D94BA;
 }
 
-.site-header__toggle,
-.site-footer__toggle {
+.site-header__toggle {
   display: none;
 }
 
@@ -161,51 +160,68 @@
 
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
-
-  .site-header__nav{
+  /* HEADER: stacking context so menu overlays hero */
+  .site-header__nav {
     position: relative;
     z-index: 1000;
+    padding: 0 1rem;
   }
-  .site-header__links,
-  .site-footer__links {
+
+  /* HEADER: hide link container by default */
+  .site-header__links {
     display: none;
     flex-direction: column;
-    background: transparent;
     position: absolute;
     top: var(--bar-height);
     left: 0;
     width: 100%;
     padding: 1rem 0;
     gap: 0.5rem;
+    background: transparent;
   }
 
-  /* Open links container layering */
+  /* HEADER: reveal transparent overlaid menu when open */
   .site-header__nav.open .site-header__links {
-    position: absolute;
-    top: var(--bar-height);
-    left: 0;
-    width: 100%;
     display: flex;
     z-index: 1001;
     background: transparent;
   }
 
-  /* Show the burger toggles */
-  .site-header__toggle,
-  .site-footer__toggle {
+  /* HEADER: show only the burger toggle */
+  .site-header__toggle {
     display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #C4F1BE;
+    cursor: pointer;
   }
 
-  /* Spacing for links when they’re visible */
-  .site-header__link,
-  .site-footer__link {
+  /* HEADER: vertical spacing for links in the open menu */
+  .site-header__link {
     margin: 0.5rem 0;
   }
 
-  /* When nav is “open”, show the links */
-  .site-header__nav.open .site-header__links,
-  .site-footer__nav.open .site-footer__links {
-    display: flex;
+  /* FOOTER: ensure no toggle appears */
+  .site-footer__toggle {
+    display: none !important;
+  }
+
+  /* FOOTER: always show links in a responsive row */
+  .site-footer__links {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.5rem 1rem;
     background: transparent;
+    position: static;
+    width: auto;
+    padding: 1rem 0;
+  }
+
+  /* FOOTER: small vertical tap padding on each link */
+  .site-footer__link {
+    padding: 0.25rem 0;
   }
 }
