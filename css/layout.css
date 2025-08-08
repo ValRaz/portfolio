@@ -160,7 +160,6 @@
 
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
-  /* HEADER: overlayed transparent burger menu (unchanged) */
   .site-header__nav {
     position: relative;
     z-index: 1000;
@@ -179,6 +178,7 @@
   .site-header__nav.open .site-header__links {
     display: flex;
     z-index: 1001;
+    background: transparent;
   }
   .site-header__toggle {
     display: block;
@@ -187,60 +187,42 @@
     margin: 0.5rem 0;
   }
 
-  /* FOOTER: always show links in a responsive row */
+  .site-footer {
+    height: auto;
+  }
   .site-footer__links {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 0.5rem 1rem;
-    position: static;
+    align-items: center;
+    justify-items: center;
+    background: transparent !important;
+    position: static !important;
     width: 100%;
-    padding: 1rem 0;
-    position: static;
+    padding: 0.75rem 0;
   }
   .site-footer__link {
-    padding: 0.25rem 0;
     text-align: center;
+    padding: 0.5rem 0;
+  }
+  .site-footer__link .icon {
+    height: 1.25rem;
+    width: auto;
+    display: inline-block;
   }
 }
 
 /* Screens narrower than 480px */
 @media (max-width: 480px) {
-
-  /* Inner links container: column stack, centered */
   .site-footer__links {
-    position: static !important;
-    background: transparent !important;
-    width: auto !important;
-    margin-left: 1rem;
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5rem 1rem;
-  }
-
-  .site-footer__nav {
-    background: transparent;
-    padding: 1rem 0;
-  }
-
-  /* Each link (and the icon) is full-width touch target */
-  .site-footer__link {
-    display: block;
-    width: 100%;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.5rem;
     padding: 0.5rem 0;
   }
-
-  /* Shrink the LinkedIn icon to fit naturally */
-  .site-footer__link img.icon {
-    max-height: 1.5rem;
-    width: auto;
-    display: inline-block;
+  .site-footer__link {
+    font-size: clamp(.9rem, 3.5vw, 1rem);
+  }
+  .site-footer__link .icon {
+    height: 1.1rem;
   }
 }
