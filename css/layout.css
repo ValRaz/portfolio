@@ -162,10 +162,10 @@
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
 
-.site-header__nav{
-  position: relative;
-  z-index: 1000;
-}
+  .site-header__nav{
+    position: relative;
+    z-index: 1000;
+  }
   .site-header__links,
   .site-footer__links {
     display: none;
@@ -177,6 +177,17 @@
     width: 100%;
     padding: 1rem 0;
     gap: 0.5rem;
+  }
+
+  /* Open links container layering */
+  .site-header__nav.open .site-header__links {
+    position: absolute;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1001;
+    background: transparent;
   }
 
   /* Show the burger toggles */
