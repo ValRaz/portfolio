@@ -160,14 +160,11 @@
 
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
-  /* HEADER: stacking context so menu overlays hero */
+  /* HEADER: overlayed transparent burger menu (unchanged) */
   .site-header__nav {
     position: relative;
     z-index: 1000;
-    padding: 0 1rem;
   }
-
-  /* HEADER: hide link container by default */
   .site-header__links {
     display: none;
     flex-direction: column;
@@ -179,35 +176,21 @@
     gap: 0.5rem;
     background: transparent;
   }
-
-  /* HEADER: reveal transparent overlaid menu when open */
   .site-header__nav.open .site-header__links {
     display: flex;
     z-index: 1001;
-    background: transparent;
   }
-
-  /* HEADER: show only the burger toggle */
   .site-header__toggle {
     display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #C4F1BE;
-    cursor: pointer;
   }
-
-  /* HEADER: vertical spacing for links in the open menu */
   .site-header__link {
     margin: 0.5rem 0;
   }
 
-  /* FOOTER: ensure no toggle appears */
+  /* FOOTER: always show links in a responsive row */
   .site-footer__toggle {
     display: none !important;
   }
-
-  /* FOOTER: always show links in a responsive row */
   .site-footer__links {
     display: flex !important;
     flex-direction: row;
@@ -216,11 +199,9 @@
     gap: 0.5rem 1rem;
     background: transparent;
     position: static;
-    width: auto;
+    width: 100%;
     padding: 1rem 0;
   }
-
-  /* FOOTER: small vertical tap padding on each link */
   .site-footer__link {
     padding: 0.25rem 0;
   }
