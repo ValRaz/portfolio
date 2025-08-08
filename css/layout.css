@@ -17,14 +17,21 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
 }
 
 .site-header__link {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 600;
   color: #C4F1BE;
-  margin: 0 1rem;
+}
+
+.site-header__links,
+.site-footer__links {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-header__link:hover,
@@ -32,7 +39,8 @@
   color: #8D94BA;
 }
 
-.site-header__toggle {
+.site-header__toggle,
+.site-footer__toggle {
   display: none;
 }
 
@@ -153,13 +161,34 @@
 
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
-  .site-header__nav {
+  .site-header__links,
+  .site-footer__links {
+    display: none;
     flex-direction: column;
+    background: #311847;
+    position: absolute;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 0.5rem; 
   }
-  .site-header__toggle {
+
+  /* Show the burger toggles */
+  .site-header__toggle,
+  .site-footer__toggle {
     display: block;
   }
-  .site-header__link {
+
+  /* Spacing for links when they’re visible */
+  .site-header__link,
+  .site-footer__link {
     margin: 0.5rem 0;
+  }
+
+  /* When nav is “open”, show the links */
+  .site-header__nav.open .site-header__links,
+  .site-footer__nav.open .site-footer__links {
+    display: flex;
   }
 }

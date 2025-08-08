@@ -24,12 +24,22 @@
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <nav class="site-header__nav" aria-label="Main">
-      <a href="#about" class="site-header__link">About</a>
-      <a href="#projects" class="site-header__link">Projects</a>
-      <a href="#contact" class="site-header__link">Contact</a>
-      <button class="site-header__toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-header__nav" aria-label="Main menu">
+      <div class="site-header__links" id="header-links">
+        <a href="#about"   class="site-header__link">About</a>
+        <a href="#projects"class="site-header__link">Projects</a>
+        <a href="#contact" class="site-header__link">Contact</a>
+      </div>
+      <button
+        class="site-header__toggle"
+        aria-controls="header-links"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
     </nav>
   </header>
 
@@ -170,15 +180,27 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <nav class="site-footer__nav" aria-label="Footer">
-      <a href="#about"   class="site-header__link">About</a>
-      <a href="#projects"class="site-header__link">Projects</a>
-      <a href="#contact" class="site-header__link">Contact</a>
-      <a href="https://www.linkedin.com/in/valerie-rasmussen/"
-        class="site-header__link">
-        <img src="assets/images/linkedin3d.png" alt="LinkedIn" class="icon">
-      </a>
+    <nav class="site-footer__nav" aria-label="Footer menu">
+      <div class="site-footer__links" id="footer-links">
+        <a href="#about"   class="site-header__link">About</a>
+        <a href="#projects"class="site-header__link">Projects</a>
+        <a href="#contact" class="site-header__link">Contact</a>
+        <a href="https://www.linkedin.com/in/valerie-rasmussen/"
+          class="site-header__link">
+          <img src="assets/images/linkedin3d.png"
+              alt="LinkedIn" class="icon">
+        </a>
+      </div>
+      <button
+        class="site-footer__toggle"
+        aria-controls="footer-links"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
     </nav>
     <p class="site-footer__text">&copy; 2025 Valerie Rasmussen</p>
   </footer>
