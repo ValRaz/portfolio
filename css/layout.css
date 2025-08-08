@@ -1,0 +1,165 @@
+/* Navigation: Flexbox with deep purple background */
+.site-header {
+  margin-bottom: 1rem;
+}
+.site-header,
+.site-footer {
+  height: var(--bar-height);
+  background: #311847;
+  display: flex;
+  align-items: center;
+}
+
+.site-header__nav,
+.site-footer__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header__link {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: #C4F1BE;
+  margin: 0 1rem;
+}
+
+.site-header__link:hover,
+.site-header__link:focus {
+  color: #8D94BA;
+}
+
+.site-header__toggle {
+  display: none;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 400px;
+  margin-bottom: 2rem;
+  background: url('../assets/images/portfoliohero.webp') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ADF1D2;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* Dark overlay */
+.hero__overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Centered content */
+.hero__content {
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 800px;
+  z-index: 1;
+}
+
+/* Hero text */
+.hero__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero__subtitle {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* CTA button */
+.hero__button {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #28666E;
+  color: #C4F1BE;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: #00241B;
+}
+
+.projects__heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #311847;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Projects grid: light periwinkle background for cards container */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #8D94BA;
+}
+
+/* Section backgrounds */
+.about {
+  background: #28666E;
+  color: #ADF1D2;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  background: #00241B;
+  color: #ADF1D2;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.site-footer {
+  margin-top: 1rem;
+}
+
+.site-footer__nav img.icon {
+  max-height: 100%;
+  height: 2.5rem;
+  object-fit: contain;
+  width: auto;
+  display: block;
+}
+
+/* Mobile-first breakpoints */
+@media (max-width: 600px) {
+  .site-header__nav {
+    flex-direction: column;
+  }
+  .site-header__toggle {
+    display: block;
+  }
+  .site-header__link {
+    margin: 0.5rem 0;
+  }
+}

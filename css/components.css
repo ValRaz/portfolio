@@ -1,0 +1,90 @@
+/* Project cards: use Source Sans 3 for content */
+.project-card {
+  background: #FFFFFF;
+  border: 2px solid #28666E;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #00241B;
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: #F0F0F0;
+  padding: 10px;
+}
+
+.project-card__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 1rem;
+  color: #311847;
+}
+
+.project-card__description {
+  font-family: 'Mada', sans-serif;
+  font-weight: 400;
+  margin: 0 1rem 1rem;
+  color: #311847;
+}
+
+.project-card__link {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: #28666E;
+}
+
+.project-card__link:hover {
+  color: #00241B;
+}
+
+/* Contact form inputs & button */
+.contact {
+  margin-top: 2rem;
+}
+
+.contact__input,
+.contact__textarea {
+  font-family: 'Mada', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #311847;
+  border-radius: 4px;
+  background: #FFFFFF;
+  color: #311847;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: #28666E;
+  outline: none;
+}
+
+.contact__button {
+  font-family: 'Mada', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #28666E;
+  color: #ADF1D2;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact__button:hover,
+.contact__button:focus {
+  background: #00241B;
+}
