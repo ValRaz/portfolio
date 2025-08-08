@@ -195,7 +195,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 0.5rem 1rem;
-    background: #311847;
+    background: transparent; ;
     position: static;
     width: 100%;
     padding: 1rem 0;
