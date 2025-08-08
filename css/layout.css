@@ -188,21 +188,21 @@
   }
 
   /* FOOTER: always show links in a responsive row */
-  .site-footer__toggle {
-    display: none !important;
-  }
   .site-footer__links {
     display: flex !important;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     gap: 0.5rem 1rem;
-    background: transparent;
+    background: #311847;
     position: static;
     width: 100%;
     padding: 1rem 0;
+    position: static;
   }
   .site-footer__link {
     padding: 0.25rem 0;
+    text-align: center;
   }
 }
