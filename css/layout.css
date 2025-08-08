@@ -162,7 +162,7 @@
 /* Mobile-first breakpoints */
 @media (max-width: 600px) {
 
-.site-footer__nav{
+.site-header__nav{
   position: relative;
   z-index: 1000;
 }
