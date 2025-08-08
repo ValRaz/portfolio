@@ -165,7 +165,7 @@
   .site-footer__links {
     display: none;
     flex-direction: column;
-    background: #311847;
+    background: transparent; 
     position: absolute;
     top: var(--bar-height);
     left: 0;
@@ -190,5 +190,6 @@
   .site-header__nav.open .site-header__links,
   .site-footer__nav.open .site-footer__links {
     display: flex;
+    background: transparent;
   }
 }
