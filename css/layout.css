@@ -43,6 +43,19 @@
   display: none;
 }
 
+.site-footer__link {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: #C4F1BE;
+  text-decoration: none;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus {
+  color: #8D94BA;
+  text-decoration: underline;
+}
+
 /* Hero section */
 .hero {
   position: relative;
