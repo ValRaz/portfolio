@@ -8,7 +8,7 @@
   font-display: swap;
 }
 
-/* Source Sans 3 Variable (weight axis) */
+/* Source Mada Variable (weight axis) */
 @font-face {
   font-family: 'Mada';
   src: url('../assets/fonts/mada-variablefont_wght-webfont.woff2') format('woff2-variations'),

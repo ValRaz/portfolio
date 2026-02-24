@@ -21,7 +21,7 @@
 }
 
 .site-header__link {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 600;
   color: #C4F1BE;
 }
@@ -44,7 +44,7 @@
 }
 
 .site-footer__link {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 600;
   color: #C4F1BE;
   text-decoration: none;
@@ -99,7 +99,7 @@
 }
 
 .hero__subtitle {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   margin-bottom: 1.5rem;
@@ -108,7 +108,7 @@
 
 /* CTA button */
 .hero__button {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Mada', sans-serif;
   font-weight: 700;
   display: inline-block;
   padding: 0.75rem 1.5rem;
