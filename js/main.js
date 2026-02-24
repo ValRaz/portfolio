@@ -27,4 +27,12 @@ document.querySelectorAll('.site-header__link[href^="#"], .site-footer__link[hre
        const isOpen = nav.classList.toggle('open');
        btn.setAttribute('aria-expanded', String(isOpen));
      });
-   });
+  });
+
+// Clear contact form fields when returning to the page
+window.addEventListener('pageshow', () => {
+  const contactForm = document.querySelector('.contact__form');
+  if (contactForm) {
+    contactForm.reset(); // Clear all form fields
+  }
+});
