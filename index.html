@@ -17,6 +17,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+ <!-- Preloading for larger screens -->
+  <link rel="preload"
+      as="image"
+      href="assets/images/portfoliohero.webp"
+      media="(min-width: 600px)"
+      type="image/webp">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/base.css">
@@ -24,6 +30,7 @@
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <!-- Header -->
   <header class="site-header">
     <nav class="site-header__nav" aria-label="Main menu">
@@ -54,7 +61,7 @@
     </div>
   </section>
 
-  <main>
+  <main id="main-content">
     <section id="about" class="about">
       <h1 class="about__title">Welcome!</h1>
       <p class="about__text">
@@ -113,7 +120,7 @@
 
         <!-- PySnake -->
         <article class="project-card">
-          <img src="assets/images/pysnske.png"
+          <img src="assets/images/pysnake.png"
                alt="PySnake game screenshot"
                class="project-card__image">
           <h3 class="project-card__title">PySnake</h3>

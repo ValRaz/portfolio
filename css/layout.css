@@ -64,6 +64,9 @@
   min-height: 400px;
   margin-bottom: 2rem;
   background: url('../assets/images/portfoliohero.webp') center/cover no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
